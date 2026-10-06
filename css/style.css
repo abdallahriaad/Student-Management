@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+header h1 {
+    margin-bottom: 5px;
+}
+
+/* Main */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Sections */
+.form-section,.students-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input,.form-group select, #searchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.form-group input:focus, .form-group select:focus, #searchInput:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Button */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    align-self: end;
+}
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Students Header */
+.students-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.students-header h2 {
+    margin: 0;
+}
+#searchInput {
+    width: 250px;
+}
+
+/* Counter */
+.student-count {
+    background-color: #eff6ff;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f1f5f9;
+}
+tr:hover {
+    background-color: #f8fafc;
+}
+/* Action buttons */
+.edit-btn {
+    background-color: #f59e0b;
+    margin-right: 5px;
+}
+.edit-btn:hover {
+    background-color: #d97706;
+}
+.delete-btn {
+    background-color: #dc2626;
+}
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* Empty message */
+#emptyMessage {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+    .students-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #searchInput {
+        width: 100%;
+    }
+    table {
+        min-width: 700px;
+    }
+}

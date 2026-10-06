@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple student management system built with HTML, CSS and JavaScript.">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage student information easily</p>
+    </header>
+
+    <main>
+        <!-- Student Form -->
+        <section class="form-section">
+            <h2>Add Student</h2>
+
+            <form id="studentForm" action="" method="POST">
+                <div class="form-group">
+                    <label for="studentName">Full Name</label>
+                    <input type="text" id="studentName" placeholder="Enter student name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentEmail">Email</label>
+                    <input type="email" id="studentEmail" placeholder="Enter student email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentMajor">Major</label>
+                    <input type="text" id="studentMajor" placeholder="Enter student major" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentLevel">Level</label>
+                    <select id="studentLevel" required>
+                        <option value="">Select Level</option>
+                        <option value="Level 1">Level 1</option>
+                        <option value="Level 2">Level 2</option>
+                        <option value="Level 3">Level 3</option>
+                        <option value="Level 4">Level 4</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitButton">Add Student</button>
+            </form>
+        </section>
+
+        <!-- Students Section -->
+        <section class="students-section">
+            <div class="students-header">
+                <h2>Students</h2>
+                <input type="search" id="searchInput" placeholder="Search student...">
+            </div>
+
+            <!-- Students Counter -->
+            <div class="student-count">
+                Total Students:
+                <span id="studentCount">0</span>
+            </div>
+
+            <!-- Students Table -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Major</th>
+                            <th>Level</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentsTableBody">
+                        <!-- Students will be added using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No students found.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Management System - ABDALLAH R. H. ABUHGORAB</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+
+</body>
+
+</html>
